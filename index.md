@@ -2,13 +2,13 @@
 layout: workshop # DON'T CHANGE THIS.
 carpentry: "swc" # what kind of Carpentry (must be either "lc" or "dc" or "swc").
 # Be sure to update the Carpentry type in _config.yml as well.
-venue: "Introduction to Git" # brief name of host site without address (e.g., "Euphoric State University")
-address: "" # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+venue: "Version Control with Git" # brief name of host site without address (e.g., "Euphoric State University")
+address: "7-8 Chambers stree" # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "UK" # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "English" # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-latlng: "55.946154, -3.186409" # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "" # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "" # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+latlng: "55.94800, -3.18753" # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+humandate: "Friday Jan 17, 2020" # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "09:30 - 11:30" # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate:
 enddate:
 instructor: ["Matthew Hamilton"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -22,12 +22,10 @@ eventbrite: # optional: alphanumeric key for Eventbrite registration, e.g., "123
 
 <p>
   This hands-on workshop will cover the principles of using Git
-  for version control and LaTeX for typesetting.
+  for version control.
   We encourage you to help one another
-  and to apply what they you learned to your own research problems.
-  This tutorial is based on the principles of <a href="{{site.swc_site}}">Software Carpentry</a>, which aims to help researchers get their work done
-  in less time and with less pain
-  by teaching them basic research computing skills.
+  and to apply what you have learned to your own research problems.
+  This tutorial is based on the principles of <a href="{{site.swc_site}}">Software Carpentry</a>, which aims to help researchers get their work done in less time and with less pain by teaching them basic research computing skills.
 </p>
 <p align="center">
   <em>
@@ -36,7 +34,6 @@ eventbrite: # optional: alphanumeric key for Eventbrite registration, e.g., "123
     "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
   </em>
 </p>
-
 
 {% comment %}
 AUDIENCE
@@ -61,11 +58,12 @@ can use https://itouchmap.com/latlong.html to find the lat/long of an
 address.
 {% endcomment %}
 {% if page.latlng %}
+
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
   Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
+  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=18">OpenStreetMap</a>
   or
   <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
@@ -77,6 +75,7 @@ DATE
 This block displays the date and links to Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
+
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.
@@ -89,6 +88,7 @@ SPECIAL REQUIREMENTS
 
 Modify the block below if there are any special requirements.
 {% endcomment %}
+
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
   Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
@@ -97,11 +97,11 @@ Modify the block below if there are any special requirements.
 {% comment%}
 CODE OF CONDUCT
 {% endcomment %}
+
 <p id="code-of-conduct">
   <strong>Code of Conduct:</strong> Everyone who participates is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident
   if needed.
 </p>
-
 
 {% comment %}
 ACCESSIBILITY
@@ -109,6 +109,7 @@ ACCESSIBILITY
 Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
+
 <p id="accessibility">
   <strong>Accessibility:</strong> We are committed to making this workshop
   accessible to everybody.
@@ -132,6 +133,7 @@ CONTACT EMAIL ADDRESS
 
 Display the contact email address set in the configuration file.
 {% endcomment %}
+
 <p id="contact">
   <strong>Contact</strong>:
   Please email
@@ -160,12 +162,12 @@ SYLLABUS
 Show what topics will be covered.
 
 1. If your workshop is R rather than Python, remove the comment
-around that section and put a comment around the Python section.
+   around that section and put a comment around the Python section.
 2. Some workshops will delete SQL.
 3. Please make sure the list of topics is synchronized with what you
-intend to teach.
+   intend to teach.
 4. You may need to move the div's with class="col-md-6" around inside
-the div's with class="row" to balance the multi-column layout.
+   the div's with class="row" to balance the multi-column layout.
 
 This is one of the places where people frequently make mistakes, so
 please preview your site before committing, and make sure to run
@@ -174,7 +176,7 @@ please preview your site before committing, and make sure to run
 
 <h2 id="syllabus">Syllabus</h2>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <h3 id="syllabus-git">Version Control with Git</h3>
     <ul>
       <li>Creating a Repository</li>
@@ -189,18 +191,17 @@ please preview your site before committing, and make sure to run
     </ul>
   </div>
 
-  <div class="col-md-6">
-    <h3 id="syllabus-python">Typesetting in LaTeX</h3>
-    <ul>
-      <li>Building a LaTeX Project</li>
-      <li>Formatting equations and images</li>
-      <li>Citations with BibTeX</li>
-      <li>Using Packages</li>
-      <li><a href="https://en.wikibooks.org/wiki/LaTeX">Reference...</a></li>
-    </ul>
-  </div>
+    <!-- <div class="col-md-6">
+      <h3 id="syllabus-python">Typesetting in LaTeX</h3>
+      <ul>
+        <li>Building a LaTeX Project</li>
+        <li>Formatting equations and images</li>
+        <li>Citations with BibTeX</li>
+        <li>Using Packages</li>
+        <li><a href="https://en.wikibooks.org/wiki/LaTeX">Reference...</a></li>
+      </ul>
+    </div> -->
 </div>
-
 
 <hr />
 
@@ -241,11 +242,25 @@ please preview your site before committing, and make sure to run
     tasks more quickly.
   </p>
   <div>
+
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#shell-windows" aria-controls="Windows" role="tab" data-toggle="tab"><i class="fab fa-windows"></i> Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#shell-macos" aria-controls="MacOS" role="tab" data-toggle="tab"><i class="fab fa-apple"></i> macOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#shell-linux" aria-controls="Linux" role="tab" data-toggle="tab"><i class="fab fa-linux"></i> Linux</a></li>
+      <li role="presentation" class="active">
+      <a data-os="windows" href="#shell-windows" aria-controls="Windows" role="tab" data-toggle="tab">
+        <i class="fab fa-windows"></i> Windows
+      </a>
+      </li>
+      <li role="presentation">
+      <a data-os="macos" href="#shell-macos" aria-controls="MacOS" role="tab" data-toggle="tab">
+        <i class="fab fa-apple"></i> macOS
+        </a>
+      </li>
+      <li role="presentation">
+      <a data-os="linux" href="#shell-linux" aria-controls="Linux" role="tab" data-toggle="tab">
+        <i class="fab fa-linux"></i> Linux
+        </a>
+      </li>
     </ul>
+
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="shell-windows">
         <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
@@ -334,6 +349,7 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 <hr />
+
 <div id="git"> {% comment %} Start of 'Git' section. {% endcomment %}
   <h3>Git</h3>
   <p>
@@ -361,9 +377,21 @@ please preview your site before committing, and make sure to run
 
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#textedit-windows" aria-controls="Windows" role="tab" data-toggle="tab"><i class="fab fa-windows"></i> Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#git-macos" aria-controls="MacOS" role="tab" data-toggle="tab"><i class="fab fa-apple"></i> macOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#git-linux" aria-controls="Linux" role="tab" data-toggle="tab"><i class="fab fa-linux"></i> Linux</a></li>
+      <li role="presentation" class="active">
+        <a data-os="windows" href="#textedit-windows" aria-controls="Windows" role="tab" data-toggle="tab">
+          <i class="fab fa-windows"></i> Windows
+        </a>
+      </li>
+      <li role="presentation">
+        <a data-os="macos" href="#git-macos" aria-controls="MacOS" role="tab" data-toggle="tab">
+          <i class="fab fa-apple"></i> macOS
+        </a>
+      </li>
+      <li role="presentation">
+        <a data-os="linux" href="#git-linux" aria-controls="Linux" role="tab" data-toggle="tab">
+          <i class="fab fa-linux"></i> Linux
+        </a>
+      </li>
     </ul>
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="git-windows">
@@ -420,8 +448,6 @@ please preview your site before committing, and make sure to run
   <p>
     For this session we recommend installing <a href="https://atom.io">Atom</a> as it is a versatile text editor with syntax highlighting available for most programming languages.
   </p>
-
-
 
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -509,6 +535,7 @@ please preview your site before committing, and make sure to run
         <a href="https://repology.org/metapackage/texlive/versions">Linux TeX Live package status</a>
         for details.</p>
     </div>
+
   </div>
 
   <h4><i class="fas fa-atom"></i> Atom</h4>
@@ -539,19 +566,19 @@ var show_instructions = function() /* Based on https://stackoverflow.com/a/30894
   $('.tab-pane[id*="' + localStorage.os + '"]').addClass('active'); //get all tabs matching the os and set to active
 }
 
-if (typeof(Storage) !== "undefined")
-{
-  if (localStorage.os == "undefined")
-  {
-    localStorage.os = "windows";
-  }
-  show_instructions();
-}
-else
-{
-  console.log("No localStorage");
-}
-
+// if (typeof(Storage) !== "undefined")
+// {
+//   if (localStorage.os == "undefined")
+//   {
+//     localStorage.os = "windows";
+//   }
+//   show_instructions();
+// }
+// else
+// {
+//   console.log("No localStorage");
+// }
+//
 $('.nav-tabs li a').click(function() /* Based on https://stackoverflow.com/a/30894829/1802726 */
 {
   localStorage.os = $(this)[0].dataset.os; //get selected os

@@ -3,12 +3,12 @@ layout: workshop # DON'T CHANGE THIS.
 carpentry: "swc" # what kind of Carpentry (must be either "lc" or "dc" or "swc").
 # Be sure to update the Carpentry type in _config.yml as well.
 venue: "Version Control with Git" # brief name of host site without address (e.g., "Euphoric State University")
-address: "7-8 Chambers stree" # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "" # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "UK" # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "English" # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-latlng: "55.94800, -3.18753" # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "Friday Jan 17, 2020" # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "09:30 - 11:30" # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+latlng: "" # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+humandate: "" # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "" # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate:
 enddate:
 instructor: ["Matthew Hamilton"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -54,7 +54,7 @@ LOCATION
 
 This block displays the address and links to maps showing directions
 if the latitude and longitude of the workshop have been set. You
-can use https://itouchmap.com/latlong.html to find the lat/long of an
+can use <https://itouchmap.com/latlong.html> to find the lat/long of an
 address.
 {% endcomment %}
 {% if page.latlng %}
@@ -161,13 +161,13 @@ SYLLABUS
 
 Show what topics will be covered.
 
-1. If your workshop is R rather than Python, remove the comment
-   around that section and put a comment around the Python section.
-2. Some workshops will delete SQL.
-3. Please make sure the list of topics is synchronized with what you
-   intend to teach.
-4. You may need to move the div's with class="col-md-6" around inside
-   the div's with class="row" to balance the multi-column layout.
+1.  If your workshop is R rather than Python, remove the comment
+    around that section and put a comment around the Python section.
+2.  Some workshops will delete SQL.
+3.  Please make sure the list of topics is synchronized with what you
+    intend to teach.
+4.  You may need to move the div's with class="col-md-6" around inside
+    the div's with class="row" to balance the multi-column layout.
 
 This is one of the places where people frequently make mistakes, so
 please preview your site before committing, and make sure to run
@@ -190,17 +190,6 @@ please preview your site before committing, and make sure to run
       <li><a href="{{site.swc_pages}}/git-novice/reference">Reference...</a></li>
     </ul>
   </div>
-
-    <!-- <div class="col-md-6">
-      <h3 id="syllabus-python">Typesetting in LaTeX</h3>
-      <ul>
-        <li>Building a LaTeX Project</li>
-        <li>Formatting equations and images</li>
-        <li>Citations with BibTeX</li>
-        <li>Using Packages</li>
-        <li><a href="https://en.wikibooks.org/wiki/LaTeX">Reference...</a></li>
-      </ul>
-    </div> -->
 </div>
 
 <hr />
@@ -219,9 +208,6 @@ please preview your site before committing, and make sure to run
 
 <h2 id="setup">Setup</h2>
 
-<!-- <p>
-<strong>OS:</strong> First off, let us know which operating system you are using in <a href="https://doodle.com/poll/gttcbmqn8hr6k58r">this poll</a>. This will make it a lot easier to debug problems in advance
-</p> -->
 <p>
   To participate in you will need access to the software described below.
   In addition, you will need an up-to-date web browser.
@@ -346,6 +332,7 @@ please preview your site before committing, and make sure to run
         </p>
       </article>
     </div>
+
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
 <hr />
@@ -499,63 +486,6 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 <hr />
-<!-- <div id="editor"> {% comment %} Start of 'LaTeX' section. {% endcomment %}
-  <h3>LaTeX</h3>
-  <p>
-    LaTeX is a high-quality typesetting system designed for the production of technical and scientific documentation.
-    LaTeX is the de facto standard for the communication and publication of scientific documents.
-  </p>
-  <h4><i class="fas fa-globe"></i> Online</h4>
-  <p>
-    <a href="https://www.overleaf.com/">Overleaf</a> is a great tool for getting started with LaTeX quickly. Sadly, git integration comes at a premium, but the basic LaTeX functionality is free.<br>
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows"><i class="fab fa-windows"></i> Windows</h4>
-      <p>Check out the <a href="http://miktex.org/">MiKTeX</a> distribution
-        and it's associated editor, TeXWorks.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx"><i class="fab fa-apple"></i> macOS</h4>
-      <p>The <a href="http://www.tug.org/mactex/">MacTeX</a>
-        distribution contains everything you need, including a complete
-        TeX system with LaTeX itself and editors to write documents.
-      </p>
-    </div>
-
-    <div class="col-md-4">
-      <h4 id="editor-linux"><i class="fab fa-linux"></i> Linux</h4>
-      <p>Check your Linux distributions software source for a TeX
-        distribution including LaTeX. You can also
-        install the current <a href="https://www.tug.org/texlive">TeX Live distribution</a>
-        directly---in fact this may be advisable as many Linux distributions only contain
-        older versions of TeX Live, see
-        <a href="https://repology.org/metapackage/texlive/versions">Linux TeX Live package status</a>
-        for details.</p>
-    </div>
-
-  </div>
-
-  <h4><i class="fas fa-atom"></i> Atom</h4>
-  <p>
-    After you have installed one of the above LaTeX distributions, I would highly recommend using Atom. There are a couple of packages that need to be installed, but the benefits out-weigh the inconvenience. You will need to download the following
-    packages:
-  </p>
-  <ul>
-    <li><a href="https://atom.io/packages/latex">Latex</a> compile tool by thomasjo</li>
-    <li><a href="https://atom.io/packages/latex-autocomplete">latex-autocomplete</a> by evpok</li>
-    <li><a href="https://atom.io/packages/language-latex">Language-LaTeX</a> by area</li>
-  </ul>
-  <p>
-    NB: Windows users may want to download <a href="https://www.tug.org/texlive/acquire-netinstall.html">TexLive</a> if they are having trouble with getting atom to work with LaTeX.
-  </p>
-  <h3>BibTeX</h3>
-  <p>On of the powerful aspects of LaTeX is bibliography management using BibTeX. Bibliography files (\*.bib) are most easily edited and modified using a management system. These graphical user interfaces all feature a database form, where
-    information is entered for each reference item, and the resulting text file can be used directly by BibTeX.</p>
-  <p>For this session we will be using <a href="http://www.jabref.org">JabRef</a>.</p>
-</div> {% comment %} End of 'LaTeX' section. {% endcomment %} -->
 
 <script>
 var show_instructions = function() /* Based on https://stackoverflow.com/a/30894829/1802726 */
@@ -566,19 +496,6 @@ var show_instructions = function() /* Based on https://stackoverflow.com/a/30894
   $('.tab-pane[id*="' + localStorage.os + '"]').addClass('active'); //get all tabs matching the os and set to active
 }
 
-// if (typeof(Storage) !== "undefined")
-// {
-//   if (localStorage.os == "undefined")
-//   {
-//     localStorage.os = "windows";
-//   }
-//   show_instructions();
-// }
-// else
-// {
-//   console.log("No localStorage");
-// }
-//
 $('.nav-tabs li a').click(function() /* Based on https://stackoverflow.com/a/30894829/1802726 */
 {
   localStorage.os = $(this)[0].dataset.os; //get selected os
